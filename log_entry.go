@@ -12,6 +12,13 @@ type Agent APIObject
 // Channel is the means by which the action was carried out.
 type Channel struct {
 	Type string
+	Details struct {
+		Check struct {
+			Deployment string `json:"deployment_id"`
+		} `json:"check"`
+	} `json:"details"`
+	//Subject string
+	//Summary string
 }
 
 // Context are to be included with the trigger such as links to graphs or images.
